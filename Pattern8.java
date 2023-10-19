@@ -1,16 +1,21 @@
+import java.util.*;
+
 public class Pattern8 {
     public static void main(String[] args) {
-        for(int i=1;i<=9;i++){
-            for(int j=1;j<=10;j++){
-                if(i==5 || j==5){
-                System.out.print("*");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size value : ");
+        int n = sc.nextInt();
+        int mid = (int) (n / 2);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == mid || j == mid) {
+                    System.out.print("+");
+                } else {
+                    System.out.print(" ");
+                }
             }
-            else{
-                System.out.print(" ");
-            }
+            System.out.println();
         }
-        System.out.println();
-        }
+        sc.close();
     }
-    
 }
